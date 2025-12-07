@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://wsbq46vhfxa7"]
+
+[ext_resource type="Script" uid="uid://r7kav4gxrdr2" path="res://scenes/entities/player/player.gd" id="1_afppm"]
+[ext_resource type="Texture2D" uid="uid://ck4lfmmupa75i" path="res://assets/sprites/player/Male_3_Idle0.png" id="1_tlaso"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_afppm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -194)
+texture = ExtResource("1_tlaso")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-38, 0, -24, -15, 0, -20, 24, -15, 38, 0, 24, 15, 0, 20, -24, 15)
+
+[node name="Camera2D" type="Camera2D" parent="."]
